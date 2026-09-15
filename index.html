@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Spin SA - Win Amazing Rewards!</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #001f3f 0%, #0074D9 50%, #2ECC40 100%); /* SA Flag inspired colors */
+            color: #ffffff;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-attachment: fixed;
+        }
+
+        /* Container for the content */
+        .container {
+            max-width: 600px;
+            width: 92%;
+            background: rgba(0, 0, 0, 0.75); /* Dark overlay for text readability */
+            border: 3px solid #FFD700; /* Gold border */
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Header Text */
+        h1 {
+            font-size: 2.5rem;
+            color: #FFD700;
+            text-shadow: 3px 3px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 1px 1px 0px #000;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        .sub-headline {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+            background: #e63946; /* Red banner */
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 50px;
+            transform: rotate(-2deg);
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            border: 1px solid #fff;
+        }
+
+        /* The Large Image Section */
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border: 4px solid #FFD700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+            /* Animation to draw attention */
+            animation: pulse 2s infinite; 
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); }
+            50% { transform: scale(1.02); box-shadow: 0 0 35px rgba(255, 215, 0, 1); }
+            100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); }
+        }
+
+        /* Text under image */
+        .cta-text {
+            font-size: 1.15rem;
+            margin-bottom: 25px;
+            line-height: 1.6;
+            color: #f1f1f1;
+        }
+
+        .cta-text strong {
+            color: #FFD700;
+            font-size: 1.3rem;
+        }
+
+        /* Button Styling */
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .spin-btn {
+            display: block;
+            width: 100%;
+            padding: 18px 10px;
+            font-size: 1.3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: 3px solid #ffffff;
+            position: relative;
+            box-shadow: 0 6px 0 rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+
+        /* Button 1 Style - Gold/Orange (Primary CTA) */
+        .btn-primary {
+            background: linear-gradient(to bottom, #FFD700 0%, #FF8C00 100%);
+            color: #000000;
+            text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 0 rgba(0,0,0,0.3);
+            filter: brightness(1.1);
+        }
+
+        .btn-primary:active {
+            transform: translateY(2px);
+            box-shadow: 0 4px 0 rgba(0,0,0,0.3);
+        }
+
+        /* Button 2 Style - Green (Secondary CTA) */
+        .btn-secondary {
+            background: linear-gradient(to bottom, #00C851 0%, #007E33 100%);
+            color: #ffffff;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 0 rgba(0,0,0,0.3);
+            filter: brightness(1.1);
+        }
+
+        .btn-secondary:active {
+            transform: translateY(2px);
+            box-shadow: 0 4px 0 rgba(0,0,0,0.3);
+        }
+
+        /* Small icons/labels */
+        .trust-badges {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            color: #ccc;
+        }
+
+        .trust-badges span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .footer {
+            margin-top: 10px;
+            font-size: 0.75rem;
+            color: #aaa;
+            padding-bottom: 20px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 480px) {
+            h1 { font-size: 2rem; }
+            .sub-headline { font-size: 1rem; }
+            .spin-btn { font-size: 1.1rem; padding: 15px; }
+            .cta-text { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <h1>LUCKY SPIN<br>SOUTH AFRICA</h1>
+        <div class="sub-headline">WIN AMAZING REWARDS!</div>
+
+        <!-- Large Image Section -->
+        <!-- IMPORTANT: Replace the src below with the direct link to your chosen large image -->
+        <img src="[url=https://i.top4top.io/p_3910y8ydv1.png][img]https://i.top4top.io/s_3910y8ydv1.png[/img][/url]" alt="Lucky Spin Wheel South Africa Rewards" class="hero-image">
+
+        <!-- Text Section -->
+        <p class="cta-text">
+            <strong>Real Rewards. Real People.</strong><br>
+            You have been selected to spin the wheel! Win an iPhone, Cash, Data, Airtime, or Grocery Vouchers.<br>
+            <span style="color: #FFD700; font-weight: bold;">It only takes a spin!</span>
+        </p>
+
+        <!-- Buttons Section -->
+        <div class="btn-container">
+            <!-- Button 1: Inserting the first link provided -->
+            <a href="https://aff.arab1.site/?utm_medium=02f7fbf129f2143231fd8bd8df78418c2651d732&utm_campaign=target_ZA_05f0d5" class="spin-btn btn-primary">
+                🎰 SPIN NOW & WIN
+            </a>
+
+            <!-- Button 2: Inserting the second link provided -->
+            <a href="https://aff.arab1.site/?utm_medium=8bcdfaebce2c49ae7348224ff94bf906931236ae&utm_campaign=target_ZA_e5efcd" class="spin-btn btn-secondary">
+                🎁 CLAIM YOUR REWARD
+            </a>
+        </div>
+
+        <!-- Trust Signals -->
+        <div class="trust-badges">
+            <span>🛡️ Safe & Simple</span>
+            <span>⚡ Quick & Easy</span>
+            <span>📱 Works on Any Device</span>
+            <span>🇿🇦 South Africa Only</span>
+        </div>
+
+        <div class="footer">
+            Promotional campaign. Terms & conditions apply.
+        </div>
+    </div>
+
+</body>
+</html>
